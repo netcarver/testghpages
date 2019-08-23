@@ -1,0 +1,12 @@
+#webchat {
+  font-family: "Open Sans", Helvetica, "Helvetica Neue", sans-serif;
+}
+
+#webchat a {
+  color: #3498db;
+}
+
+#webchat img[alt=hubbotimg] {
+  width: 120px;
+  height: 120px;
+}
