@@ -29,6 +29,9 @@
         initPayload: "/greet",
         interval: 1200,
         //customData: {"userId": "123"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+        customData: {
+            "location": location.hostname
+        }
         socketUrl: server,
         socketPath: "/socket.io/",
         title: "Chat to HubBot",
