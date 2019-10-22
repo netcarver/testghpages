@@ -28,9 +28,9 @@
         selector: "#webchat",
         initPayload: "/greet",
         interval: 1200,
-        //customData: {"userId": "123"}, // arbitrary custom data. Stay minimal as this will be added to the socket
         customData: {
-            "location": location.hostname
+            "location": location.hostname,
+            "host" : "fadedbeef"
         },
         socketUrl: server,
         socketPath: "/socket.io/",
