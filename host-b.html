@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Chatbot demonstration page">
+    <title>Chatroom Socket.IO Demo</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+  </head>
+  <body>
+
+    <div style="text-align: center; color: #636363">
+      <span style="font-size: small">Robot images lovingly provided by <a href="https://robohash.org" rel="noopener noreferer">robohash.org</a> under a CC-BY license.</span>
+    </div>
+
+    <div id="webchat" />
+
+    <script src="index.js"></script>
+    <script type="text/javascript">
+      if (location.hostname == 'localhost') {
+          var server = 'http://localhost:5005';
+      } else {
+          var server = 'http://remote.connectpp.co.uk:5005';
+      }
+      console.log(`Chatroom using bot server at [${server}]`);
+
+      WebChat.default.init({
+        selector: "#webchat",
+        initPayload: "/greet",
+        interval: 1200,
+        customData: {
+            "location": location.hostname,
+            "host" : "b"
+        },
+        socketUrl: server,
+        socketPath: "/socket.io/",
+        title: "Chat to HubBot",
+        subtitle: "Private Practice Hub's Digital Assistant",
+        inputTextFieldHint: "Type a message...",
+        connectingText: "HubBot is not connected. Waiting...",
+        hideWhenNotConnected: true,
+        fullScreenMode: false,
+        autofocus: true,
+        openLauncherImage: 'launcher_button.svg',
+        closeLauncherImage: 'clear-button.svg',
+        params: {
+          images: {
+            dims: {
+              width: 300,
+              height: 200,
+            }
+          },
+          storage: "session"
+        }
+      })
+    </script>
+  </body>
+</html>
