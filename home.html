@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>BotHub</title>
+    <style>
+    body {
+    font-family: "Open Sans", Helvetica, "Helvetica Neue", sans-serif;
+    }
+
+    #main {
+    margin: 60px;
+    }
+    </style>
+  </head>
+  <body>
+
+    <div id="main" style="text-align: center; color: #636363">
+      <img id="roboimg" class="image" src="https://robohash.org/31.185.157.254.png" title="A Robot" />
+      <span style="font-size: small">Robot images lovingly provided by <a href="https://robohash.org" rel="noopener noreferer">robohash.org</a> under a CC-BY license.</span>
+    </div>
+
+    <script type="text/javascript">
+        var image = document.getElementById("roboimg");
+        var visitor_image = Math.random().toString(24);
+        image.src = "https://robohash.org/" + visitor_image + ".png";
+    </script>
+  </body>
+</html>
