@@ -17,11 +17,7 @@
 
     <script src="index.js"></script>
     <script type="text/javascript">
-      if (location.hostname == 'localhost') {
-          var server = 'http://localhost:5005';
-      } else {
-          var server = 'http://remote.connectpp.co.uk:5005';
-      }
+      var server = 'https://deepscan.pw:8443';
       console.log(`Chatroom using bot server at [${server}]`);
 
       WebChat.default.init({
